@@ -25,7 +25,7 @@ public class RoomController {
     @PostMapping
     public Room createRoom(@RequestBody Room room){return roomService.createRoom(room);}
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteRoom(@PathVariable String id){roomService.deleteRoom(id);}
 
     @PutMapping("/{id}")
