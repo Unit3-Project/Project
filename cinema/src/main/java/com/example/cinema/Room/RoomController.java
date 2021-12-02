@@ -17,7 +17,9 @@ public class RoomController {
     public RoomController(RoomService roomService) {this.roomService = roomService;}
 
     @GetMapping
-    public List<Room> getRooms(){return roomService.getRooms();}
+    public List<Room> getRooms(){
+        System.out.println("hii");
+        return roomService.getRooms();}
 
     @GetMapping("/{id}")
     public Room getRoom(@PathVariable String id){return roomService.getRoom(id);}
