@@ -7,50 +7,50 @@ import com.example.cinema.Room.RoomRepository;
 import com.example.cinema.User.User;
 import com.example.cinema.User.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
 public class TicketService {
+    @Autowired
+    private  TicketRepository ticketRepository;
+    @Autowired
+    private  RoomRepository roomRepository;
+    @Autowired
+    private  MovieRepository movieRepository;
+    @Autowired
+    private  UserRepository userRepository;
+//
+//    public TicketService(TicketRepository ticketRepository, RoomRepository roomRepository, MovieRepository movieRepository, UserRepository userRepository) {
+//        this.ticketRepository = ticketRepository;
+//        this.roomRepository = roomRepository;
+//        this.movieRepository = movieRepository;
+//        this.userRepository = userRepository;
+//    }
 
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private MovieRepository movieRepository;
-    @Autowired
-    private RoomRepository roomRepository;
-    @Autowired
-    private TicketRepo ticketRepo;
+    public List<Ticket> getTicket (){return ticketRepository.findAll();}
 
-    public List<Ticket> getAllTickets()
-    {
-        return ticketRepo.findAll();
+    public Ticket getTickets(String id) {
+        Long ticket_id = Long.parseLong(id);
+        return ticketRepository.findById(ticket_id).orElse(null);
     }
 
-    public ResponseEntity<String> saveTicket(Ticket ticket)
-    {
-        Long movie_id = ticket.getMovie().getId();
-        Movie movie = movieRepository.getById(movie_id);
-
-        Long room_id = ticket.getRoom().getId();
-        Room room = roomRepository.getById(room_id);
-
-        Long user_id = ticket.getUser().getId();
-        User user = userRepository.getById(user_id);
 
 
-        if (movie != null && room != null && user != null){
-            ticket.setMovie(movie);
-            ticket.setRoom(room);
-            ticket.setUser(user);
-            ticketRepo.save(ticket);
-            return ResponseEntity.ok().body("Saved Successfully");
-        }
-        else {
-            return ResponseEntity.badRequest().body("Not Found???????");
-        }
+
+
+    public Ticket bookMovie(Movie movie, User user, Room room) {
+        Movie ticket_movie = movieRepository.findById(movie.getId()).orElse(null);
+        User ticket_user = userRepository.findById(user.getId()).orElse(null);
+        Room ticket_room = roomRepository.findById(room.getId()).orElse(null);
+
+        Ticket ticket = new Ticket();
+        ticket.setMovie(ticket_movie);
+        ticket.setRoom(ticket_room);
+        ticket.setUser(ticket_user);
+        ticket.setStatus("pending");
+
+        return ticketRepository.save(ticket);
+
     }
 }

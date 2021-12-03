@@ -1,7 +1,10 @@
 package com.example.cinema.User;
 
 
+import com.example.cinema.Ticket.Ticket;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -14,6 +17,9 @@ public class User {
     private String password;
     private String role;
     private Integer age;
+
+//    @OneToMany(mappedBy = "user")
+//    private List<Ticket> tickets;
 
     public User(Long id, String name, String email, String password, String role, Integer age) {
         this.id = id;

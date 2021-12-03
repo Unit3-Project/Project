@@ -19,7 +19,8 @@ public class Movie {
     private String img;
     private String trailer;
 
-
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ticket")
+//    private List<Movie> movie = new ArrayList<>();
 
     public Movie() {
     }

@@ -6,39 +6,37 @@ import com.example.cinema.User.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.List;
+
 
 @Entity
-@Table(name = "ticket")
+@Table (name = "ticket")
 public class Ticket {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String status;
 
-    @ManyToOne
-    @JoinColumn(name = "movie_id")
-    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
-    private Movie movie;
 
     @ManyToOne
     @JoinColumn(name = "room_id")
-    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
     private Room room;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
+
+    @ManyToOne
+    @JoinColumn(name ="user_id" )
     private User user;
 
-    public Ticket() {
+    public Ticket(Long id, String status) {
+        this.id = id;
+        this.status = status;
     }
 
-    public Ticket(Long id, Movie movie, Room room, User user) {
-        this.id = id;
-        this.movie = movie;
-        this.room = room;
-        this.user = user;
+    public Ticket(){
+
     }
 
     public Long getId() {
@@ -49,12 +47,12 @@ public class Ticket {
         this.id = id;
     }
 
-    public Movie getMovie() {
-        return movie;
+    public String getStatus() {
+        return status;
     }
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Room getRoom() {
@@ -63,6 +61,14 @@ public class Ticket {
 
     public void setRoom(Room room) {
         this.room = room;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
     }
 
     public User getUser() {
