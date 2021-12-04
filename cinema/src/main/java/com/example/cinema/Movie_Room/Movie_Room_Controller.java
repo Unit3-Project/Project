@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("available_movies")
+@CrossOrigin("*")
 public class Movie_Room_Controller {
 
     @Autowired
