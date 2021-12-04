@@ -1,6 +1,7 @@
 package com.example.cinema.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -37,6 +38,24 @@ public class UserService {
             user.setRole(data.getRole());
             user.setAge(data.getAge());
             userRepository.save(user);
+        }
+    }
+
+    public ResponseEntity<?> login(LoginForm loginForm)
+    {
+        if(userRepository.findByEmail(loginForm.getEmail()) != null)
+        {
+            if(loginForm.getPassword().equals(userRepository.findByEmail(loginForm.getEmail()).getPassword()))
+            {
+                return ResponseEntity.ok().body(userRepository.findByEmail(loginForm.getEmail()));
+            }
+            else
+            {
+                return ResponseEntity.status(404).body("Wrong Password");
+            }
+        }
+        else{
+            return ResponseEntity.status(404).body("User Not found");
         }
     }
 }

@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="538889c3-a0d2-45b7-b4fe-33985c3869c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/TicketRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/TicketService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +36,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="hsqldb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -89,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1637847549817</updated>
       <workItem from="1638445169233" duration="676000" />
-      <workItem from="1638445879786" duration="3142000" />
+      <workItem from="1638445879786" duration="17422000" />
     </task>
     <servers />
   </component>
