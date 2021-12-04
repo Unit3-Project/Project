@@ -1,6 +1,7 @@
 package com.example.cinema.Ticket;
 
 import com.example.cinema.Movie.Movie;
+import com.example.cinema.Movie_Room.Movie_Room;
 import com.example.cinema.Room.Room;
 import com.example.cinema.User.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,15 +17,21 @@ public class Ticket {
     @Column(name = "id")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "movie_id")
-    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
-    private Movie movie;
+//    @ManyToOne
+//    @JoinColumn(name = "movie_id")
+//    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
+//    private Movie movie;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "room_id")
+//    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
+//    private Room room;
+
 
     @ManyToOne
-    @JoinColumn(name = "room_id")
+    @JoinColumn(name = "movie_room_id")
     @JsonProperty(access = JsonProperty.Access.READ_WRITE)
-    private Room room;
+    private Movie_Room movie_room;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -34,10 +41,9 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(Long id, Movie movie, Room room, User user) {
+    public Ticket(Long id, Movie_Room movie_room, User user) {
         this.id = id;
-        this.movie = movie;
-        this.room = room;
+        this.movie_room = movie_room;
         this.user = user;
     }
 
@@ -49,20 +55,12 @@ public class Ticket {
         this.id = id;
     }
 
-    public Movie getMovie() {
-        return movie;
+    public Movie_Room getMovie_room() {
+        return movie_room;
     }
 
-    public void setMovie(Movie movie) {
-        this.movie = movie;
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
+    public void setMovie_room(Movie_Room movie_room) {
+        this.movie_room = movie_room;
     }
 
     public User getUser() {
