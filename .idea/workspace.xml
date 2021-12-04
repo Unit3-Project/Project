@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="538889c3-a0d2-45b7-b4fe-33985c3869c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e64c87a1-9a73-45a4-99f6-0d32a862c0e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e64c87a1-9a73-45a4-99f6-0d32a862c0e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Movie/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/User/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
