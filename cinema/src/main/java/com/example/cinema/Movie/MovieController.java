@@ -7,6 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "movies")
+@CrossOrigin("*")
 public class MovieController {
     private final MovieService movieService;
 
