@@ -47,4 +47,9 @@ public class Movie_Room_Service {
         }
 
     }
+    public Movie_Room getAvailableMovie(String id)
+    {
+        Long movie_room_id = Long.parseLong(id);
+        return movie_room_repo.findById(movie_room_id).orElse(null);
+    }
 }
