@@ -20,6 +20,12 @@ public class Movie_Room_Controller {
         return movie_room_service.getAllAvailableMovies();
     }
 
+    @GetMapping("/{id}")
+    public  Movie_Room getAvailableMovie(@PathVariable String id)
+    {
+        return movie_room_service.getAvailableMovie(id);
+    }
+
     @PostMapping
     public ResponseEntity<String> saveAvailableMovie(@RequestBody Movie_Room movie_room)
     {
