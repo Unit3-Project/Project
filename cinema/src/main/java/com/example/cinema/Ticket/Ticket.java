@@ -17,6 +17,9 @@ public class Ticket {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "status")
+    private String status;
+
 //    @ManyToOne
 //    @JoinColumn(name = "movie_id")
 //    @JsonProperty(access = JsonProperty.Access.READ_WRITE)
@@ -41,10 +44,19 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(Long id, Movie_Room movie_room, User user) {
+    public Ticket(Long id, String status, Movie_Room movie_room, User user) {
         this.id = id;
+        this.status = status;
         this.movie_room = movie_room;
         this.user = user;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Long getId() {
