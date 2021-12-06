@@ -5,6 +5,7 @@ import com.example.cinema.Room.Room;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,7 +17,7 @@ public class Movie_Room {
     private Long id;
 
     @Column(name = "date")
-    private Date date;
+    private LocalDate date;
 
     @Column(name = "price")
     private Double price;
@@ -34,7 +35,7 @@ public class Movie_Room {
     public Movie_Room() {
     }
 
-    public Movie_Room(Long id, Date date, Double price, Movie movie, Room room) {
+    public Movie_Room(Long id, LocalDate date, Double price, Movie movie, Room room) {
         this.id = id;
         this.date = date;
         this.price = price;
@@ -50,11 +51,11 @@ public class Movie_Room {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
