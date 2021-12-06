@@ -10,4 +10,6 @@ public interface TicketRepo extends JpaRepository<Ticket,Long> {
 
 //    @Query("SELECT u from user u where u.id = ?1")
 //    List<Ticket> getAllUserTicket(Long user_id);
+
+    List<Ticket>  findByUserId(Long user_id);
 }

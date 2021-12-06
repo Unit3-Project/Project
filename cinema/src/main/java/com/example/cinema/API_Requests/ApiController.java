@@ -5,6 +5,8 @@ import com.example.cinema.Ticket.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("api")
@@ -24,6 +26,12 @@ public class ApiController {
     public  String changeTicketStatus(@PathVariable String ticket_id , @RequestBody Ticket ticket)
     {
         return apiService.changeTicketStatus(ticket_id, ticket);
+    }
+
+    @GetMapping("/getUserTickets/{user_id}")
+    public List<Ticket> getUserTicket(@PathVariable String  user_id)
+    {
+        return  apiService.getUserTicket(user_id);
     }
 
 

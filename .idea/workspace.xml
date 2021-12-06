@@ -8,8 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/API_Requests/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/API_Requests/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/API_Requests/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/API_Requests/ApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/TicketRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/src/main/java/com/example/cinema/Ticket/TicketRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <updated>1637847549817</updated>
       <workItem from="1638445169233" duration="676000" />
       <workItem from="1638445879786" duration="17422000" />
-      <workItem from="1638687531133" duration="10288000" />
+      <workItem from="1638687531133" duration="11702000" />
     </task>
     <servers />
   </component>
