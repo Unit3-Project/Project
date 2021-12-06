@@ -1,10 +1,10 @@
 package com.example.cinema.API_Requests;
 
+import com.example.cinema.Movie.Movie;
+import com.example.cinema.Ticket.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 @RequestMapping("api")
@@ -19,6 +19,14 @@ public class ApiController {
     public AdminPageData getAdminPageData(){
         return apiService.getAdminPageData();
     }
+
+    @PatchMapping("/changeTicketStatus/{ticket_id}")
+    public  String changeTicketStatus(@PathVariable String ticket_id , @RequestBody Ticket ticket)
+    {
+        return apiService.changeTicketStatus(ticket_id, ticket);
+    }
+
+
 }
 
 class AdminPageData{
