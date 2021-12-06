@@ -11,6 +11,8 @@ import com.example.cinema.User.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ApiService {
 
@@ -52,5 +54,10 @@ public class ApiService {
         else{
             return null;
         }
+    }
+
+    public List<Ticket> getUserTicket(String user_id)
+    {
+        return ticketRepo.findByUserId(Long.parseLong(user_id));
     }
 }
